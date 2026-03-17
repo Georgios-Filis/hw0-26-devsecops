@@ -39,7 +39,7 @@ jobs:
         with:
           command: quickview, cves
           image: ghcr.io/georgios-filis/hw0-26-devsecops:latest
-          dockerhub-user: ${{ secrets.DOCKER_HUB_USER }}
-          dockerhub-password: ${{ secrets.DOCKER_HUB_PAT }}          
+          dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
+          dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}          
           only-severities: critical, high
           sarif-file: scout-report.sarif

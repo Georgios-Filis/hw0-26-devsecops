@@ -16,23 +16,27 @@ jobs:
     steps:
       - name: Checkout code
         # Checking out the repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v6
         with:
-          # 3.8
           python-version: 3.14
 
       - name: Install Bandit
         run: pip install bandit
 
       - name: Run Bandit Scan
-        run: bandit ir .
+        run: bandit ir . -f json -o bandit-report.json
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: bandit-findings
+          path: bandit-report.json
 
   build-and-scan:
     runs-on: ubuntu-latest
-    # Permissions
     permissions:
       contents: read
       packages: write

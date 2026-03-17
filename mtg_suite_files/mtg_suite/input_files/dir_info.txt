@@ -1,0 +1,1 @@
+# This directory will store any input files provided to the pipeline.

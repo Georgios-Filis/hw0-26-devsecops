@@ -1,0 +1,1 @@
+# This directory will store the SRA files downlaoded and extracted by sra-tools.

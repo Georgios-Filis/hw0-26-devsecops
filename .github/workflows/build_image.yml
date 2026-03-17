@@ -1,12 +1,35 @@
 name: GitHub Actions and Docker Scout
 
+# Determining when this workflow runs.
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
+# SAST scan - Bandit: Primarily for Python code
 jobs:
+  sast_scan:
+    name: Run Bandit scout-action
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        # Checking out the repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          # 3.8
+          python-version: 3.14
+
+      - name: Install Bandit
+        run: pip install bandit
+
+      - name: Run Bandit Scan
+        run: bandit ir .
+
   build-and-scan:
     runs-on: ubuntu-latest
     # Permissions

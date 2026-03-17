@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/georgios-filis:latest
           push: true
           no-cache: true
 
@@ -38,6 +38,6 @@ jobs:
         uses: docker/scout-action@v1
         with:
           command: quickview, cves
-          image: ghcr.io/${{ github.repository }}:latest
+          image: ghcr.io/georgios-filis:latest
           only-severities: critical, high
           sarif-file: scout-report.sarif

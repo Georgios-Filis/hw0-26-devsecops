@@ -50,6 +50,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
+          # Automatic variables provided by GitHub Actions every time a workflow runs.
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 

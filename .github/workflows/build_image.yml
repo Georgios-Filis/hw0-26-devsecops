@@ -70,3 +70,9 @@ jobs:
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}          
           only-severities: critical, high
           sarif-file: scout-report.sarif
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-scout-findings
+          path: scout-report.sarif

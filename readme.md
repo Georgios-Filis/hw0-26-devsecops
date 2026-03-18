@@ -12,6 +12,10 @@ Student GitHub:  Georgios-Filis
 
 ### Part 2. Running our first devsecops pipeline
 
+GitHub repository:<br>
+Name: hw0-26-devsecops<br>
+Link: https://github.com/Georgios-Filis/hw0-26-devsecops
+
 #### Image
 <div style="text-align: justify">
 The Dockerfile was based on the one used for the production of the following image: <a href="https://hub.docker.com/r/skretaslab/proteoseeker/tags">skretaslab/proteoseeker:light_v1.0.0</a>. The Dockerfile was modified extensively and the image generated can act as the basis of a Bioinformatics project. It contains several metagenomics analysis tools as well as a modified version of the proteoseeker.py script from the GitHub repository of <a href="https://github.com/SkretasLab/ProteoSeeker">proteoseeker</a>. The modified script "mtg_suite.py" performs certain metagenomics analysis processes on sequence-input data.

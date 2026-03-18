@@ -1,5 +1,5 @@
 GitHub action results can be found at:
-https://github.com/Georgios-Filis/hw0-26-devsecops/actions/runs/23197432315
+https://github.com/Georgios-Filis/hw0-26-devsecops/actions/runs/23243104988
 
 GitHub action run on the following image:
 https://github.com/Georgios-Filis/hw0-26-devsecops/pkgs/container/hw0-26-devsecops
